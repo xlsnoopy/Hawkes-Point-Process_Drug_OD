@@ -1,2 +1,2 @@
 # CS520_Hawkes
-Code and data and everything for the project
+A research project that studies Hawkes point process, and how it estimates missing information using fused data.

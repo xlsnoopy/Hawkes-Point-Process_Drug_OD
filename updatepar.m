@@ -1,8 +1,7 @@
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % function to estimate parameters from branching probabilities
 
-function [K0, w, mu1, mu2, sigma]=updatepar(data,p)
+function [K0, w, mu, sigma]=updatepar(data,p)
 
 N=sum(sum(p));
 sumP=0;
@@ -12,8 +11,6 @@ x = data(:,1);
 y = data(:,2);
 w=0;
 sigma=0;
-mu1=0;
-mu2=0;
 mu=0;
 for i=1:size(t,1)
     for j= 1:(i-1)
@@ -27,19 +24,11 @@ for i=1:size(t,1)
             sigma=sigma+p(i,j)*d;
         end
     end
-    
-    if data(i,5)==1
-        mu1 = mu1+p(i,i);
-    else
-        mu2 = mu2+p(i,i);
-    end
-%     mu = mu + p(i,i);
+    mu = mu + p(i,i);
     
 end
 
 K0=sumP/N;
 w=sumP/w;
 sigma=(sigma/(2*sumP))^.5;
-% mu=mu/(max(t)-min(t));
-
 end

@@ -3,6 +3,8 @@ function [times x y p]=Hawkes_Simulation(mu,k0,w,T,sig, bg)
 %to a self-exciting point process with exponential triggering kernel and
 %parameters mu (const. background rate)
 %k0 (branching ratio) and w (exp parameter) on the time interval [0,T]
+%it also simulates event locations, called "x" and "y",
+%with a background vector (bg)
 
 
 times=zeros(5000,1);
@@ -26,15 +28,9 @@ for i = 1:p
     else
         y(i,1) = .5 + .5*rand;
     end
-%     rt = rand;
-%     if rt <= 1/3
-%         times(i,1) = .5*rt*T;
-%     else 
-%         times(i,1) = .5 + .5*rt*T;
-%     end
+
 end
-% x(1:p,1)=rand(p,1);
-% y(1:p,1)=rand(p,1);
+
 counts=1;
 countf=p;
 
@@ -42,7 +38,7 @@ countf=p;
 %even the offspring events can generate their own offspring
 
 while((countf-counts)>-1)
-p0=pois(k0); %each event generates p offspring according to a Poisson r.v. with parameter k0
+p0=pois(k0);  %each event generates p offspring according to a Poisson r.v. with parameter k0
 for j=1:p0
     temp=times(counts)-log(rand())/w; % this generates an exponential r.v. on [t_counts,infty]
     temp2=x(counts)+sig*randn(); % inter-point distances are gaussian
@@ -57,7 +53,7 @@ end
 counts=counts+1;
 end
 data=[times(1:countf) x(1:countf) y(1:countf)];
-data=sortrows(data,1);
+data=sortrows(data,1); %sort by times
 times=data(:,1);
 x=data(:,2);
 y=data(:,3);

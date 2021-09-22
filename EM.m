@@ -1,4 +1,4 @@
-function [K0, w, mu1, mu2, sigma, u, v, old_P] = EM(Data, K0, w, mu1, mu2, sigma, niter, bw2d, bw1d)
+function [K0, w, mu, sigma, u, v, old_P] = EM(Data, K0, w, mu, sigma, niter, bw2d, bw1d)
 N = size(Data,1);
 old_P = diag(ones(N,1));
 %% EM-H iterations
@@ -18,12 +18,12 @@ for iter = 1:niter
     
         % E-Step: calculate probabilities
      new_P = updatep_m2(Data(:,3), Data(:,1), Data(:,2), old_P, ...
-        K0,w,mu1, mu2,sigma,u, v);% v_h{i}, v_d{i}, v_m{i}, v_y{i});
+        K0,w,mu, sigma,u, v);% v_h{i}, v_d{i}, v_m{i}, v_y{i});
         
 
 
         % M-Step: update params
-    [K0,w,mu1, mu2,sigma]=updatepar(Data, new_P);
+    [K0,w,mu,sigma]=updatepar(Data, new_P);
 %     [K0,w,mu,sigma]
 %     u
 %     v
@@ -42,6 +42,7 @@ for iter = 1:niter
 %             Data(j,14) = sum(rand >= cumsum([0, density(Data(j,4),:)]));
 %         end
 %     end
+disp([K0, w, mu, sigma]);
 end
 end
 

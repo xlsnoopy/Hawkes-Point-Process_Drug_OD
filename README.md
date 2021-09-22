@@ -6,9 +6,7 @@ Applicable to geospatial data, with some high dimensional data associated with o
 
 First tested on synthetic data. Simulated dataset using four different settings of parameters. Fused, sampled and labelled, using the labelled points to estimate unlabelled ones. Parameters are well recovered, and unlabelled points are decently well assigned.
 
-Then tested on real data: opioid drug overdose cases. 
-
-This work is published 
+Then tested on real data: opioid drug overdose cases (not disclosed). 
 
 # Cite the work
 The work has been published [here](https://www.imstat.org/publications/aoas/aoas_15_1/aoas_15_1.pdf#page=15). If you find this helpful, please consider citing:

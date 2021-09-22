@@ -7,3 +7,22 @@ Applicable to geospatial data, with some high dimensional data associated with o
 First tested on synthetic data. Simulated dataset using four different settings of parameters. Fused, sampled and labelled, using the labelled points to estimate unlabelled ones. Parameters are well recovered, and unlabelled points are decently well assigned.
 
 Then tested on real data: opioid drug overdose cases. 
+
+This work is published 
+
+# Cite the work
+The work has been published [here](https://www.imstat.org/publications/aoas/aoas_15_1/aoas_15_1.pdf#page=15). If you find this helpful, please consider citing:
+> @article{10.1214/20-AOAS1384,
+author = {Xueying Liu and Jeremy Carter and Brad Ray and George Mohler},
+title = {{Point process modeling of drug overdoses with heterogeneous and missing data}},
+volume = {15},
+journal = {The Annals of Applied Statistics},
+number = {1},
+publisher = {Institute of Mathematical Statistics},
+pages = {88 -- 101},
+keywords = {expectation maximization algorithm, nonnegative matrix factorization, opioid overdose, point process, semisupervised learning},
+year = {2021},
+doi = {10.1214/20-AOAS1384},
+URL = {https://doi.org/10.1214/20-AOAS1384}
+}
+

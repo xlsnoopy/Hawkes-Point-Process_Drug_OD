@@ -13,28 +13,15 @@ This work is published
 # Cite the work
 The work has been published [here](https://www.imstat.org/publications/aoas/aoas_15_1/aoas_15_1.pdf#page=15). If you find this helpful, please consider citing:
 > @article{10.1214/20-AOAS1384,
-> 
 > author = {Xueying Liu and Jeremy Carter and Brad Ray and George Mohler},
-> 
 > title = {{Point process modeling of drug overdoses with heterogeneous and missing data}},
-> 
-> volume = {15},
-> 
-> journal = {The Annals of Applied Statistics},
-> 
+> volume = {15}, 
+> journal = {The Annals of Applied Statistics}, 
 > number = {1},
-> 
 > publisher = {Institute of Mathematical Statistics},
-> 
-> pages = {88 -- 101},
-> 
-> keywords = {expectation maximization algorithm, nonnegative matrix factorization, opioid overdose, point process, semisupervised learning},
-> 
-> year = {2021},
-> 
+> pages = {88 -- 101}, 
+> year = {2021}, 
 > doi = {10.1214/20-AOAS1384},
-> 
-> URL = {https://doi.org/10.1214/20-AOAS1384}
-> 
+> URL = {https://doi.org/10.1214/20-AOAS1384} 
 > }
 

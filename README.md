@@ -12,7 +12,7 @@ This work is published
 
 # Cite the work
 The work has been published [here](https://www.imstat.org/publications/aoas/aoas_15_1/aoas_15_1.pdf#page=15). If you find this helpful, please consider citing:
-> @article{10.1214/20-AOAS1384,
+> @article{LiuHawkes2021,
 > author = {Xueying Liu and Jeremy Carter and Brad Ray and George Mohler},
 > title = {{Point process modeling of drug overdoses with heterogeneous and missing data}},
 > volume = {15}, 
